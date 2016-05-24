@@ -1,0 +1,9 @@
+extends layout
+
+block content	
+	p
+		each makati in messages
+			ul
+				li title: #{makati.title} 
+				li body: #{makati.body}
+	

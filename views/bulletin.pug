@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+	h1= title
+		form(name="add-bullet" method="post", id="bulletform")
+			span.title Title
+				input(type="text", name="title")
+				input.submit(type="submit")
+				
+			br
+			textarea(rows="20", cols="50", name="bullet", form="bulletform")
+				
+
