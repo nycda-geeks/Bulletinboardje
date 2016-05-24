@@ -7,9 +7,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var pg = require('pg')
-var connectionString = "postgres://maartje:hartje123@192.168.99.100:32772/bulletinboard"
+//var connectionString = "postgres://maartje:hartje123@192.168.99.100:32772/bulletinboard"
 
-
+var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletinboard';
 var app = express();
 
 // view engine setup
